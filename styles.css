@@ -1,0 +1,174 @@
+/* ===== Base ===== */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+:root {
+  --accent: #06B6D4; /* teal */
+  --muted: #6b7280;
+  --border: #eeeeee;
+
+  /* Light theme */
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --text: #111111;
+  --text-strong: #000000;
+  --section-alt: #F9FAFB;   /* light gray band in light mode */
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ===== Dark mode (charcoal, not pure black) ===== */
+body.dark {
+  --bg: #1E1E1E;          /* page background */
+  --panel: #2A2A2A;       /* cards/nav/footer */
+  --text: #E0E0E0;        /* body text */
+  --text-strong: #F5F5F5; /* headings */
+  --border: #3A3A3A;
+  --section-alt: #1E1E1E; /* remove light bands in dark mode */
+}
+
+/* Accessibility */
+.skip-link {
+  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+.skip-link:focus { position: static; width: auto; height: auto; padding: 8px; background: #000; color: #fff; }
+
+/* ===== Header ===== */
+.site-header {
+  background: var(--bg);
+  color: var(--text-strong);
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.site-header h1 { margin: 0; font-size: 40px; font-weight: 700; }
+.site-header p  { margin: 10px 0 0; font-size: 18px; color: var(--text); }
+
+/* ===== Nav (sticky) ===== */
+.site-nav {
+  position: sticky; top: 0; z-index: 5;
+  background: var(--panel); color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 16px;
+  display: flex; align-items: center; justify-content: center;
+  gap: 20px;
+}
+.site-nav ul {
+  display: flex; list-style: none; margin: 0; padding: 0; gap: 40px;
+}
+.site-nav a {
+  color: var(--text-strong); text-decoration: none; font-weight: 700; font-size: 18px;
+  transition: color .2s ease;
+}
+.site-nav a:hover { color: var(--accent); }
+.site-nav a.active { color: var(--accent); }
+.nav-actions { position: absolute; right: 16px; }
+#themeToggle {
+  background: var(--bg); color: var(--text-strong);
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 8px 12px; cursor: pointer; font-size: 14px;
+}
+#themeToggle:hover { color: var(--accent); }
+
+/* ===== Sections ===== */
+.section { padding: 40px 20px; background: var(--bg); }
+.section-alt { background: var(--section-alt); }
+.container { max-width: 1000px; margin: 0 auto; }
+
+/* Introduction layout */
+.intro { display: flex; align-items: center; gap: 40px; }
+.intro-text { flex: 1; font-size: 18px; line-height: 1.6; color: var(--text); }
+.intro-text h2 { font-size: 28px; margin: 0 0 20px 0; color: var(--text-strong); }
+.intro-pic img {
+  width: 250px; height: auto; border-radius: 12px; border: 2px solid var(--border);
+}
+
+/* Cards & lists */
+.card {
+  border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  background: var(--panel); color: var(--text);
+}
+.card h3 { margin: 0 0 8px 0; font-size: 22px; color: var(--text-strong); }
+.card .links a { margin-right: 12px; color: var(--accent); text-decoration: none; }
+.card .links a:hover { text-decoration: underline; }
+.role ul { margin: 8px 0 0 20px; }
+
+/* Skills list */
+.skills { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.skills li {
+  border: 1px solid var(--border); border-radius: 999px; padding: 8px 12px; background: var(--panel); color: var(--text);
+}
+
+/* ===== Footer ===== */
+.site-footer { background: var(--panel); color: var(--text); border-top: 1px solid var(--border); }
+.footer-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 30px 20px;
+}
+.footer-inner a { color: var(--text-strong); text-decoration: none; margin-left: 12px; }
+.footer-inner a:hover { color: var(--accent); }
+#copyEmail {
+  background: var(--bg); color: var(--text-strong); border: 1px solid var(--border); border-radius: 8px;
+  padding: 8px 12px; cursor: pointer; font-size: 14px; margin-right: 8px;
+}
+#copyEmail:hover { color: var(--accent); }
+
+/* ===== Back to top ===== */
+#backToTop {
+  position: fixed; right: 16px; bottom: 16px; width: 44px; height: 44px;
+  border-radius: 999px; border: 1px solid var(--border); background: var(--panel); color: var(--text-strong);
+  display: none; align-items: center; justify-content: center; cursor: pointer;
+  font-size: 20px; z-index: 10;
+}
+#backToTop.show { display: flex; }
+#backToTop:hover { color: var(--accent); }
+
+
+/* ===== Top scroll progress bar inside nav ===== */
+#scrollProgress {
+  position: absolute;
+  left: 0;
+  bottom: 0;               /* sits at the bottom edge of the sticky nav */
+  height: 3px;
+  width: 0%;
+  background: var(--accent);
+  transition: width .1s linear;
+  pointer-events: none;
+}
+
+/* ===== Collapsible cards (Projects + Experience) ===== */
+.collapsible { cursor: default; }
+.collapsible h3 {
+  display: flex; align-items: center; justify-content: space-between;
+  cursor: pointer;
+}
+.collapsible h3::after {
+  content: "▾";
+  font-size: 18px;
+  opacity: .7;
+  transition: transform .2s ease;
+}
+.collapsible.open h3::after { transform: rotate(180deg); }
+.collapse-content { display: none; }
+.collapsible.open .collapse-content { display: block; }
+
+/* ===== Back-to-top: turn into a progress circle ===== */
+#backToTop {
+  /* ring + inner disc */
+  background:
+    radial-gradient(var(--panel) 62%, transparent 63%),
+    conic-gradient(var(--accent) var(--p, 0%), #3a3a3a 0);
+  border: 1px solid var(--border);
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .intro { flex-direction: column; text-align: left; }
+  .nav-actions { position: static; }
+}
