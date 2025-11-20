@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!--scale based on device dimensions-->
-  <title>Roger Jin — CS Resume</title>
-  <meta name="description" content="Roger Jin — CS + Finance @ Emory. Projects, experience, skills, and contact." /> <!--for google search-->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roger Jin — Portfolio</title>
+  <meta name="description" content="Roger Jin — CS + Finance at Emory. Projects, ML, quant research, and experience." />
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
+
 <body>
-  <a class="skip-link" href="#main">Skip to content</a> <!--accessibility-->
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Header -->
   <header class="site-header">
     <div class="brand">
       <h1>Roger L. Jin</h1>
-      <p>CS + Finance @ Emory | roger.jin@emory.edu | (346)631-7749</p>
+      <p>CS + Finance @ Emory | roger.jin@emory.edu | (346) 631-7749</p>
     </div>
   </header>
 
   <!-- Nav -->
-  <nav class="site-nav" aria-label="Primary"> <!--aria-label for screen reader-->
+  <nav class="site-nav" aria-label="Primary">
     <ul>
       <li><a href="#Introduction" class="nav-link">Introduction</a></li>
       <li><a href="#Projects" class="nav-link">Projects</a></li>
@@ -32,131 +33,154 @@
     </div>
   </nav>
 
-  <!-- Main content -->
   <main id="main">
-    <!-- Introduction -->
+
+    <!-- INTRODUCTION -->
     <section id="Introduction" class="section">
       <div class="container intro">
         <div class="intro-text">
           <h2>Introduction</h2>
           <p>
-            Hi! My name is Roger Jin and I am a rising junior at Emory University
-            studying Computer Science and Finance. I’m passionate about software,
-            data, and product development, and I’ve previously interned at TaiDoc
-            Health, YesTech Corp, and EAI Capital. My goal is to build impactful
-            technology that bridges business and computer science.
+            I’m a CS + Finance student at Emory University focused on machine learning,
+            AI systems, and quantitative analysis. I have experience building production-ready
+            AI pipelines, ML valuation models, full-stack applications, and quantitative
+            trading strategies across startups and investment firms.
           </p>
         </div>
         <figure class="intro-pic">
-          <img
-            src="CYCHeadshot-17.jpg"
-            alt="Portrait of Roger Jin"
-            width="300" height="380"
-            loading="lazy"
-          >
+          <img src="CYCHeadshot-17.jpg" alt="Portrait of Roger Jin" width="300" height="380" loading="lazy">
         </figure>
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- PROJECTS -->
     <section id="Projects" class="section section-alt">
       <div class="container">
         <h2>Projects</h2>
 
+        <!-- Crypto Pairs Trading -->
         <article class="card">
-          <h3>Poker Learning Environment</h3>
-          <p>Java-based poker engine with odds calculations and multiplayer support.</p>
-          <p><strong>Tech:</strong> Java, Algorithms</p>
-          <p class="links">
-            <a href="#" target="_blank" rel="noopener">Code</a> <!-- link to code-->
-            <a href="#" target="_blank" rel="noopener">Demo</a> <!-- link to demo-->
-          </p>
+          <h3>Cryptocurrency Statistical Arbitrage (Pairs Trading)</h3>
+          <div class="collapse-content">
+            <p>
+              Built a mean-reversion strategy across 50 cryptocurrencies using
+              cointegration testing, rolling hedge ratios, z-score signals, and
+              regime-based risk controls. Evaluated performance with drawdowns,
+              turnover, and out-of-sample Sharpe.
+            </p>
+            <p><strong>Tech:</strong> Python, pandas, NumPy, statsmodels</p>
+            <p class="links">
+              <a href="#" target="_blank" rel="noopener">Code</a>
+              <a href="#" target="_blank" rel="noopener">Demo</a>
+            </p>
+          </div>
         </article>
 
+        <!-- Expense Tracker SaaS -->
         <article class="card">
-          <h3>RAG Video Ad Generator</h3>
-          <p>Automated marketing clip pipeline using retrieval-augmented generation; benchmarked 20+ AI tools.</p>
-          <p><strong>Tech:</strong> Python, LangChain, FFmpeg</p>
-          <p class="links">
-            <a href="#" target="_blank" rel="noopener">Code</a>
-            <a href="#" target="_blank" rel="noopener">Demo</a>
-          </p>
+          <h3>Expense Tracker SaaS (Next.js + PostgreSQL)</h3>
+          <div class="collapse-content">
+            <p>
+              Full-stack web app with authentication, budgets, recurring
+              transactions, ACID-safe database operations, and API-driven
+              architecture. Fully containerized and built for multi-user scalability.
+            </p>
+            <p><strong>Tech:</strong> TypeScript, Next.js, Prisma, tRPC, PostgreSQL, Docker</p>
+            <p class="links">
+              <a href="#" target="_blank" rel="noopener">Code</a>
+              <a href="#" target="_blank" rel="noopener">Demo</a>
+            </p>
+          </div>
         </article>
+
+        <!-- Soccer ML -->
+        <article class="card">
+          <h3>Soccer Player Performance Prediction (ML Pipeline)</h3>
+          <div class="collapse-content">
+            <p>
+              Built an ML pipeline across 25K+ matches and 10K+ players using engineered
+              match-context features (xG/xA, passing accuracy, defensive actions).
+              Implemented Random Forest, XGBoost, and LSTM RNN models, reducing error
+              by 20% vs baseline.
+            </p>
+            <p><strong>Tech:</strong> Python, scikit-learn, XGBoost, Keras, SQL</p>
+            <p class="links">
+              <a href="#" target="_blank" rel="noopener">Code</a>
+              <a href="#" target="_blank" rel="noopener">Demo</a>
+            </p>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <!-- Experience -->
+    <!-- EXPERIENCE -->
     <section id="Experience" class="section">
       <div class="container">
         <h2>Experience</h2>
 
+        <!-- ZenZiee -->
         <article class="role card">
-          <h3>ZenZiee, Social Networking Startup — Atlanta, GA</h3>
-          <p><strong>Marketing/AI Engineer</strong> · Mar 2025 – Present</p>
-          <ul>
-            <li>Automated production of 50+ GenAI marketing clips by constructing a RAG-based AI workflow.</li>
-            <li>Developed a pitch deck that secured admission to two startup accelerators (ATDC, Jumpstart Cleveland).</li>
-            <li>Led tool selection by benchmarking 20+ AI platforms on performance and cost, informing product roadmap.</li>
-          </ul>
+          <h3>ZenZiee — Atlanta, GA</h3>
+          <div class="collapse-content">
+            <p><strong>AI Engineer Intern</strong> · Mar 2025 – Aug 2025</p>
+            <ul>
+              <li>Built LLM-powered agentic workflows and RAG systems (LangChain, FAISS) automating 50+ marketing tasks.</li>
+              <li>Engineered Python + SQL pipelines to structure unorganized user data into embeddings and model-ready features.</li>
+              <li>Benchmarked 20+ LLMs on latency, accuracy, and cost, informing deployment decisions.</li>
+            </ul>
+          </div>
         </article>
 
+        <!-- Taidoc -->
         <article class="role card">
-          <h3>TaiDoc Health, Fortune 500-backed Healthcare Startup — Shanghai, CN</h3>
-          <p><strong>Software Engineer Intern</strong> · May 2024 – Aug 2024</p>
-          <ul>
-            <li>Developed scripts to pre-prompt AI model for patient diagnosis and treatment using LangChain (Python).</li>
-            <li>Created data visualizations of patient records using Python and presented dashboards to team and leadership.</li>
-            <li>Sanitized 100K+ patient responses using SQL to prepare data inputs for training an AI diagnosis model.</li>
-          </ul>
+          <h3>TaiDoc Health — Shanghai, CN</h3>
+          <div class="collapse-content">
+            <p><strong>Software Engineer Intern</strong> · May 2024 – Aug 2024</p>
+            <ul>
+              <li>Developed diagnostic AI pipelines improving consistency and interpretability of model outputs.</li>
+              <li>Cleaned and transformed 100K+ patient records (SQL + Python) into ML-ready datasets.</li>
+              <li>Built dashboards visualizing sequential data and model performance for engineering leadership.</li>
+            </ul>
+          </div>
         </article>
 
+        <!-- EAI Capital -->
         <article class="role card">
-          <h3>EAI Capital, Investment Management — Atlanta, GA</h3>
-          <p><strong>Private Equity Summer Analyst</strong> · Jun 2025 – Present</p>
-          <ul>
-            <li>Analyzed the effect of 15+ financial metrics on valuation multiples across different industries.</li>
-            <li>Sourced and evaluated 10+ potential acquisition targets in the construction services industry.</li>
-            <li>Performed initial valuation assessments by analyzing EBITDA and valuation multiples of qualified deals.</li>
-          </ul>
+          <h3>EAI Capital — Atlanta, GA</h3>
+          <div class="collapse-content">
+            <p><strong>Private Equity Quant Intern</strong> · Jun 2025 – Aug 2025</p>
+            <ul>
+              <li>Built regression-based valuation models quantifying how 15+ financial and operational metrics impact multiples.</li>
+              <li>Automated scoring and ranking for 100+ acquisition targets, reducing manual review time by 50%.</li>
+              <li>Developed factor-based screening pipelines revealing ML-driven valuation patterns.</li>
+            </ul>
+          </div>
         </article>
 
-        <article class="role card">
-          <h3>Chinese Undergraduate Student Organization — Atlanta, GA</h3>
-          <p><strong>Incoming President</strong> · Apr 2025 – Present</p>
-          <ul>
-            <li>Elected to lead 30+ member organization, overseeing $120K+ budget and strategic direction for 20+ events.</li>
-            <li>Collaborated with school officials and campus leaders to design the club’s 2025–2026 programming.</li>
-          </ul>
-          <p><strong>Vice President of Fundraising</strong> · Sep 2023 – Apr 2025</p>
-          <ul>
-            <li>Negotiated $35K+ in corporate sponsorships from 20+ Asian American brands to support club events.</li>
-            <li>Oversaw merchandise, beverage, and ticket sales that raised $10K+ in funds and boosted club visibility.</li>
-            <li>Facilitated the annual Asian Night Market, drawing 2K+ attendees and winning Emory Program of the Year.</li>
-          </ul>
-        </article>
       </div>
     </section>
 
-    <!-- Skills -->
+    <!-- SKILLS -->
     <section id="Skills" class="section section-alt">
       <div class="container">
         <h2>Skills</h2>
         <ul class="skills">
-          <li>Java</li><li>Python</li><li>SQL</li><li>JavaScript</li>
-          <li>React</li><li>Tableau</li><li>LangChain</li><li>PostgreSQL</li>
+          <li>Python</li><li>Java</li><li>SQL</li><li>C++</li>
+          <li>JavaScript</li><li>TypeScript</li><li>LangChain</li><li>scikit-learn</li>
+          <li>XGBoost</li><li>Keras</li><li>PostgreSQL</li><li>Docker</li>
+          <li>Next.js</li><li>Prisma</li><li>tRPC</li>
         </ul>
       </div>
     </section>
+
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <small>© 2025 Roger L. Jin</small>
       <div class="footer-links">
-        <button id="copyEmail" data-email="roger.jin@emory.edu" aria-label="Copy email">
-          Copy Email
-        </button>
+        <button id="copyEmail" data-email="roger.jin@emory.edu" aria-label="Copy email">Copy Email</button>
         <a href="mailto:roger.jin@emory.edu">Email</a>
         <a href="https://www.linkedin.com/in/jinroger/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/rogerjin" target="_blank" rel="noopener">GitHub</a>
@@ -164,7 +188,6 @@
     </div>
   </footer>
 
-  <!-- Back to top -->
   <button id="backToTop" aria-label="Back to top">↑</button>
 </body>
 </html>
