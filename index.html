@@ -62,17 +62,20 @@
         <article class="card">
           <h3>Cryptocurrency Statistical Arbitrage (Pairs Trading)</h3>
           <div class="collapse-content">
-            <p>
-              Built a mean-reversion strategy across 50 cryptocurrencies using
-              cointegration testing, rolling hedge ratios, z-score signals, and
-              regime-based risk controls. Evaluated performance with drawdowns,
-              turnover, and out-of-sample Sharpe.
-            </p>
-            <p><strong>Tech:</strong> Python, pandas, NumPy, statsmodels</p>
-            <p class="links">
-              <a href="https://github.com/TreeRoger/crypto_pairs_stat_arb" target="_blank" rel="noopener">Code</a>
-              <a href="#" target="_blank" rel="noopener">Demo</a>
-            </p>
+            <div class="project-content">
+              <div class="project-details">
+                <p>
+                  Built a mean-reversion strategy across 50 cryptocurrencies using
+                  cointegration testing, rolling hedge ratios, z-score signals, and
+                  regime-based risk controls. Evaluated performance with drawdowns,
+                  turnover, and out-of-sample Sharpe.
+                </p>
+                <p><strong>Tech:</strong> Python, pandas, NumPy, statsmodels</p>
+                <p class="links">
+                  <a href="https://github.com/TreeRoger/crypto_pairs_stat_arb" target="_blank" rel="noopener">Code</a>
+                </p>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -80,16 +83,22 @@
         <article class="card">
           <h3>Expense Tracker SaaS (Next.js + PostgreSQL)</h3>
           <div class="collapse-content">
-            <p>
-              Full-stack web app with authentication, budgets, recurring
-              transactions, ACID-safe database operations, and API-driven
-              architecture. Fully containerized and built for multi-user scalability.
-            </p>
-            <p><strong>Tech:</strong> TypeScript, Next.js, Prisma, tRPC, PostgreSQL, Docker</p>
-            <p class="links">
-              <a href="#" target="_blank" rel="noopener">Code</a>
-              <a href="#" target="_blank" rel="noopener">Demo</a>
-            </p>
+            <div class="project-content">
+              <div class="project-details">
+                <p>
+                  Full-stack web app with authentication, budgets, recurring
+                  transactions, ACID-safe database operations, and API-driven
+                  architecture. Fully containerized and built for multi-user scalability.
+                </p>
+                <p><strong>Tech:</strong> TypeScript, Next.js, Prisma, tRPC, PostgreSQL, Docker</p>
+                <p class="links">
+                  <a href="https://github.com/TreeRoger/expense-tracker-saas" target="_blank" rel="noopener">Code</a>
+                </p>
+              </div>
+              <figure class="project-image">
+                <img src="expense-tracker-preview.png" alt="Expense Tracker SaaS preview" loading="lazy">
+              </figure>
+            </div>
           </div>
         </article>
 
@@ -97,23 +106,61 @@
         <article class="card">
           <h3>Soccer Player Performance Prediction (ML Pipeline)</h3>
           <div class="collapse-content">
-            <p>
-              Built an ML pipeline across 25K+ matches and 10K+ players using engineered
-              match-context features (xG/xA, passing accuracy, defensive actions).
-              Implemented Random Forest, XGBoost, and LSTM RNN models, reducing error
-              by 20% vs baseline.
-            </p>
-            <p><strong>Tech:</strong> Python, scikit-learn, XGBoost, Keras, SQL</p>
-            <p class="links">
-              <a href="#" target="_blank" rel="noopener">Code</a>
-              <a href="#" target="_blank" rel="noopener">Demo</a>
-            </p>
+            <div class="project-content">
+              <div class="project-details">
+                <p>
+                  Built an ML pipeline across 2K+ matches and 10K+ players using engineered
+                  match-context features (xG/xA, passing accuracy, defensive actions).
+                  Implemented Random Forest, XGBoost, and LSTM RNN models, reducing error
+                  by 20% vs baseline.
+                </p>
+                <p><strong>Tech:</strong> Python, scikit-learn, XGBoost, Keras, SQL</p>
+                <p class="links">
+                  <a href="https://github.com/TreeRoger/soccer-perf" target="_blank" rel="noopener">Code</a>
+                </p>
+              </div>
+              <figure class="project-image">
+                <img src="soccer-ml-preview.png" alt="Soccer ML Pipeline preview" loading="lazy">
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- LOL ML -->
+        <article class="card">
+          <h3>League of Legends Team Composition Prediction (ML Course Project)</h3>
+          <div class="collapse-content">
+            <div class="project-content">
+              <div class="project-details">
+                <p>
+                  Predicting match outcomes based on champion draft using various ML models.
+                  Analyzed 35K+ matches with 172+ engineered features including draft encoding,
+                  champion statistics, role features, and historical synergy/counter data.
+                </p>
+                <div class="key-results">
+                  <strong>Key Results</strong>
+                  <table>
+                    <tr><th>Feature Set</th><th>Best Model</th><th>Test Accuracy</th><th>AUC</th></tr>
+                    <tr><td>Draft Only</td><td>MLP</td><td>59.7%</td><td>0.537</td></tr>
+                    <tr><td>Champion Stats</td><td>RandomForest</td><td>59.7%</td><td>0.536</td></tr>
+                    <tr><td>Draft + Stats</td><td>LogisticRegression</td><td>59.5%</td><td>0.521</td></tr>
+                    <tr><td>All Features</td><td>GradientBoosting</td><td>81.7%</td><td>0.899</td></tr>
+                  </table>
+                </div>
+                <p><strong>Tech:</strong> Python, scikit-learn, NumPy, pandas, matplotlib, seaborn</p>
+                <p class="links">
+                  <a href="https://github.com/TreeRoger/Teamdiff_AI" target="_blank" rel="noopener">Code</a>
+                </p>
+              </div>
+              <figure class="project-image">
+                <img src="lol-ml-preview.png" alt="LoL Team Composition ML preview" loading="lazy">
+              </figure>
+            </div>
           </div>
         </article>
 
       </div>
     </section>
-
     <!-- EXPERIENCE -->
     <section id="Experience" class="section">
       <div class="container">

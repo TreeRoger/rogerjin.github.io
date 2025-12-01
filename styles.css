@@ -98,6 +98,80 @@ body.dark {
 .card .links a:hover { text-decoration: underline; }
 .role ul { margin: 8px 0 0 20px; }
 
+/* Project card with image layout */
+.project-content {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.project-details {
+  flex: 1;
+}
+.project-image {
+  flex-shrink: 0;
+  width: 350px;
+}
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+body.dark .project-image img {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Key results table for projects */
+.key-results {
+  margin: 12px 0;
+  font-size: 14px;
+}
+.key-results table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+.key-results th,
+.key-results td {
+  padding: 6px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.key-results th {
+  background: var(--section-alt);
+  font-weight: 600;
+  color: var(--text-strong);
+}
+body.dark .key-results th {
+  background: var(--bg);
+}
+.key-results td {
+  color: var(--text);
+}
+.key-finding {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--section-alt);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  font-size: 14px;
+}
+body.dark .key-finding {
+  background: var(--bg);
+}
+
+@media (max-width: 600px) {
+  .project-content {
+    flex-direction: column;
+  }
+  .project-image {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 16px;
+  }
+}
+
 /* Skills list */
 .skills { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 12px; }
 .skills li {
